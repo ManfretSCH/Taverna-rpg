@@ -7,3 +7,6 @@ if __name__ == "__main__":
 
 def test():
     print("This is a test function for caverna-rpg.")
+
+def start():
+    print('Iniciando...')
