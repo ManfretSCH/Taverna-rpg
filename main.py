@@ -1,5 +1,5 @@
 def main():
-    print("Hello from caverna-rpg!")
+    print("Hello from caverna-rpg-from-erencio!")
 
 
 if __name__ == "__main__":
