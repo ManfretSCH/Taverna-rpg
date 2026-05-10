@@ -1,4 +1,5 @@
 from database import base
+from models.pedido import Pedido
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 

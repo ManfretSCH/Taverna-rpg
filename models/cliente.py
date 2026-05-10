@@ -1,5 +1,6 @@
 from database import base
-from sqlalchemy import String
+from models.pedido import Pedido
+from sqlalchemy import String, select
 from sqlalchemy.orm import Mapped, mapped_column, relationship, Session
 
 
@@ -27,11 +28,11 @@ class ClienteCRUD:
         return cliente
     
     def listar(self):
-        return self.session.query(Cliente).filter(Cliente).all()
+        return self.session.scalars(select(Cliente)).all()
     
     def obtener(self, id):
-        return self.session.query(Cliente).filter(Cliente.id == id).first()
-    
+        return self.session.get(Cliente, id)
+
     def modificar(self, id, **datos):
         cliente_db = self.session.get(Cliente, id)
 

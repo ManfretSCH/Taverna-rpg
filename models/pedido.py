@@ -1,5 +1,7 @@
 from datetime import datetime
 from database import base
+from models.cliente import Cliente
+from models.detalle_pedido import DetallePedido
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
