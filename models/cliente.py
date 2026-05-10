@@ -1,10 +1,10 @@
-from database import base
+from database import Base
 from models.pedido import Pedido
 from sqlalchemy import String, select
 from sqlalchemy.orm import Mapped, mapped_column, relationship, Session
 
 
-class Cliente(base):
+class Cliente(Base):
     __tablename__ = 'clientes'
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)

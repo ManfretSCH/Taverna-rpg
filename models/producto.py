@@ -1,8 +1,8 @@
-from database import base
+from database import Base
 from sqlalchemy import String
 from sqlalchemy.orm import Mapped, mapped_column
 
-class Producto(base):
+class Producto(Base):
     __tablename__ = 'productos'
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)

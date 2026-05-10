@@ -1,9 +1,9 @@
-from database import base
+from database import Base
 from models.pedido import Pedido
 from sqlalchemy import ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-class DetallePedido(base):
+class DetallePedido(Base):
     __tablename__ = 'detallePedidos'
 
     pedido_id: Mapped[int] = mapped_column(ForeignKey('pedidos.id'))
